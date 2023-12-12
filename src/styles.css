@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root, *::after, *::before {
+  box-sizing: inherit;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: url("https://placehold.co/100x100/FFFFFF/EFEFEF/png?text=46494");
+  padding: 0;
+  margin: 0;
+  font-family: Calibri, serif;
+  /*min-height: 100vh;*/
 }
