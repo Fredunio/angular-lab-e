@@ -4,6 +4,20 @@ header {
   color:white;
   text-align: center;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  font-size: 1.5rem;
+  display: flex;
+  /*align-items: center;*/
+  gap: 0.5rem;
+}
+
+nav > a {
+  color: white;
 }
 
 header > h1 {

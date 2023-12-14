@@ -1,0 +1,115 @@
+.new-task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  /*justify-content: space-between;*/
+  width: 100%;
+  gap: 20px;
+  font-size: 1.2rem;
+
+}
+.form-group:not(:last-child){
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.form-group:last-child {
+  margin-left: auto;
+}
+
+.form-group input {
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.form-group button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: chartreuse;
+}
+
+.form-group label + input {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.archive-button {
+  margin-left: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:  3px 5px;
+}
+
+.deadline {
+  margin-left: 10px;
+}
+
+.actions {
+  margin-left: auto;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .tasks .task {
+    grid-template-columns: 3fr 1fr auto;
+    grid-template-areas: 'title deadline actions';
+  }
+}
+
+.tasks .task .title {
+  grid-area: title;
+}
+
+.tasks .task .deadline {
+  grid-area: deadline;
+}
+
+.tasks .task .deadline span {
+  padding: 5px;
+  background-color: chartreuse;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+.tasks .task .actions {
+  grid-area: actions;
+  text-align: right;
+}
